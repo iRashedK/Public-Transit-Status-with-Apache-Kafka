@@ -1,0 +1,26 @@
+Kafka:
+https://developer.confluent.io/quickstart/kafka-local/
+https://docs.ksqldb.io/en/latest/operate-and-deploy/installation/server-config/
+
+
+confluent platform on docker:
+	https://docs.confluent.io/platform/7.1.1/quickstart/ce-docker-quickstart.html#prerequisites
+
+download confluent:
+https://packages.confluent.io/archive/
+
+KAFKA:
+	./bin/kafka-storage format --config ./etc/kafka/kraft/server.properties --cluster-id $(./bin/kafka-storage random-uuid)
+	./bin/kafka-server-start ./etc/kafka/kraft/server.properties
+
+
+SCHEMA REGISTERY:
+	./bin/schema-registry-start ./etc/schema-registry/schema-registry.properties
+
+KSQL:
+	./bin/ksql-server-start ./etc/ksqldb/ksql-server.properties
+
+Open KSQL CLI:
+	bin/ksql http://localhost:8088
+
+

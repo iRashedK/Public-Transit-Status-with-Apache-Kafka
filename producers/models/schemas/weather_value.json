@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "name": "weather_records",
+  "namespace": "pts.weather_records",
+    "fields" : [
+        {"name" : "temperature", "type" : "float"},
+        {"name" : "status", "type": "string"}
+    ]
+}
